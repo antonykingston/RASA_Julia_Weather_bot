@@ -1,0 +1,8 @@
+# **************************************************************************************
+# WARNING: This is a static file, useful as a starting point. You may want to change it.
+# **************************************************************************************
+
+action_endpoint:
+  url: http://localhost:5055/webhook
+# nlg:
+#  url: http://localhost:5056/nlg

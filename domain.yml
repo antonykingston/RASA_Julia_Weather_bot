@@ -1,0 +1,60 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - chitchat
+  - ask_weather:
+      use_entities: true
+
+
+entities:
+- location
+
+actions:
+  - action_weather_forcast
+
+responses:
+  utter_greet:
+  - text: "Hey! I'm julia your personal assistant. How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "That's great!"
+
+  utter_goodbye:
+  - text: "Bye, it was nice talking with you."
+
+  utter_chitchat/bot_challenge:
+  - text: "Your personal assistant"
+
+  utter_chitchat/julia_name:
+  - text: "my name is Julia"
+
+  utter_chitchat/mentor_name:
+  - text: |
+      My creator's name is Kingston, you can reach out to him out by following the below URL
+
+      https://www.linkedin.com/in/antony-kingston/
+
+  utter_chitchat/julia_purpose:
+  - text: "I can tell you the weather status of any place"
+
+  utter_chitchat/julia_age:
+  - text: "I am as young as our relationship"
+
+  utter_fallback:
+  - text: Could you please rephrase it again!
